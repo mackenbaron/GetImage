@@ -1,0 +1,331 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\GetImage.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""l.CHS\\afxres.rc""      // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\GetImage.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_GETIMAGE_DIALOG DIALOGEX 0, 0, 322, 203
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "GetImage"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Start",IDOK,239,8,33,14
+    LTEXT           "Address:",IDC_STATIC,3,10,28,8
+    PUSHBUTTON      "Options",IDC_OPTION,278,8,33,14
+    EDITTEXT        IDC_EVENTS,0,28,306,159,ES_MULTILINE | ES_AUTOVSCROLL | WS_VSCROLL | WS_HSCROLL,WS_EX_STATICEDGE
+    CONTROL         "",IDC_ADDRESS,"ComboBoxEx32",CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP,34,8,194,86
+    EDITTEXT        IDC_STATUS,0,191,40,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    CTEXT           "No echo",IDC_CLEAR,279,189,40,12,SS_NOTIFY | SS_CENTERIMAGE
+    CONTROL         "",IDC_THREADNUM,"msctls_progress32",PBS_VERTICAL,309,140,11,46
+    CTEXT           "About",IDC_ABOUT,251,189,21,12,SS_NOTIFY | SS_CENTERIMAGE
+    CONTROL         135,IDC_BMP_THRD,"Static",SS_BITMAP | SS_NOTIFY,310,125,9,9
+END
+
+IDD_OPTION_DIALOG DIALOGEX 0, 0, 299, 177
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Options"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,167,144,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,227,144,50,14
+    CONTROL         "Analyze relative URL for images",IDC_ECHO_IMG,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,160,18,117,10
+    CONTROL         "Analyze relative URL for webpages",IDC_ECHO_PAGE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,160,31,128,10
+    GROUPBOX        "URL analyzing",IDC_STATIC,148,6,144,133
+    LTEXT           "Max num. of images downloaded:",IDC_STATIC,17,33,69,17
+    EDITTEXT        IDC_IMGNUM,93,34,39,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Max num. of webpages visited:",IDC_STATIC,17,57,72,16
+    EDITTEXT        IDC_PAGENUM,93,59,39,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_THRDNUM,"msctls_trackbar32",TBS_AUTOTICKS | TBS_TOOLTIPS | WS_TABSTOP,54,89,85,15
+    LTEXT           "Thread num.",IDC_STATIC,13,92,42,8
+    CONTROL         "image URL contains",IDC_IMG_INC,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,160,48,86,8
+    EDITTEXT        IDC_IMG_TXT,160,60,91,14,ES_AUTOHSCROLL
+    LTEXT           "(one keyword,\nkeep blank means startpage)",IDC_STATIC1,163,78,100,21
+    CONTROL         "webpage URL contains",IDC_PAGE_INC,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,160,100,93,8
+    EDITTEXT        IDC_PAGE_TXT,160,113,91,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Advanced",IDC_BTN_ADV,253,113,36,12
+    LTEXT           "(Setting to zero means no limit)",IDC_STATIC,22,19,100,8
+    EDITTEXT        IDC_RENAME,39,146,63,14,ES_AUTOHSCROLL
+    LTEXT           "%w=whole URL, %i=index, %n=name of image\n(other string also allowed)",IDC_STATIC,26,116,93,26
+    GROUPBOX        "Max number",IDC_STATIC,9,8,134,75
+    GROUPBOX        "Rename",IDC_STATIC,8,107,135,57
+END
+
+IDD_ADV_DIALOG DIALOGEX 0, 0, 316, 183
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Advanced"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,205,162,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,259,162,50,14
+    LTEXT           "静态",IDC_TXT_ADV,166,16,130,137
+    GROUPBOX        "Tips",IDC_STATIC,159,7,142,153
+    CONTROL         "Use advanced image URL filter",IDC_USEIMG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,19,13,113,10
+    EDITTEXT        IDC_IMGURL,50,25,98,14,ES_AUTOHSCROLL
+    CONTROL         "Use advanced webpage URL filter",IDC_USEPAGE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,19,46,124,10
+    EDITTEXT        IDC_PAGEURL,50,60,98,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SCOPE,39,98,34,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Search radius(number of characters):",IDC_STATIC,16,85,131,11
+    LTEXT           "Keyword:",IDC_STATIC,16,28,32,8
+    LTEXT           "Keyword:",IDC_STATIC,16,64,32,8
+    EDITTEXT        IDC_EDIT1,53,126,26,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,117,126,28,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,104,143,26,14,ES_AUTOHSCROLL
+    LTEXT           "HTML tag:",IDC_STATIC,17,129,34,8
+    LTEXT           "attribute:",IDC_STATIC,84,129,31,8
+    LTEXT           "Default file extension: "".",IDC_STATIC,24,146,79,8
+    LTEXT           """.",IDC_STATIC,133,146,8,8
+    LTEXT           "Image:",IDC_STATIC,14,100,24,8
+    EDITTEXT        IDC_SCOPE2,113,98,34,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Webpage:",IDC_STATIC,77,100,34,8
+    GROUPBOX        "Search style",IDC_STATIC,11,116,141,46
+END
+
+IDD_ABOUT DIALOGEX 0, 0, 228, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About GetImage"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,171,41,50,14
+    ICON            IDR_MAINFRAME,IDC_STATIC,21,16,20,20
+    LTEXT           "GetImage  v1.1",IDC_STATIC,57,15,51,8
+    CONTROL         "Ke Yan (<a>blog</a>), 2015, @ EE, Tsinghua University",IDC_SYSLINK1,
+                    "SysLink",WS_TABSTOP,58,26,147,9
+    CONTROL         "<a>program intro (Chinese)</a>",IDC_SYSLINK_W,"SysLink",WS_TABSTOP,58,38,84,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,3,0,3
+ PRODUCTVERSION 1,3,0,3
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "tsinghua"
+            VALUE "FileDescription", "图片下载"
+            VALUE "FileVersion", "1.3.0.3"
+            VALUE "InternalName", "GetImage.exe"
+            VALUE "LegalCopyright", "不保留所有权利。"
+            VALUE "OriginalFilename", "GetImage.exe"
+            VALUE "ProductName", "GetImage"
+            VALUE "ProductVersion", "1.3.0.3"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_GETIMAGE_DIALOG, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 201
+    END
+
+    IDD_OPTION_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 294
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 170
+    END
+
+    IDD_ADV_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+    END
+
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 221
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// HTML
+//
+
+IDR_HTML_OPTIONDLG      HTML                    "OptionDlg.htm"
+IDR_HTML_ABOUTDLG       HTML                    "AboutDlg.htm"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR1 ACCELERATORS
+BEGIN
+    "A",            ID_EDIT_SELECT_ALL,     VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BMP_THRD            BITMAP                  "res\\bitmap1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDP_SOCKETS_INIT_FAILED "Windows socket initializion failed."
+    IDS_DLD_PAGE_ERR        "\tDownload page error: "
+    IDS_DLD_IMG_ERR         "Error %x in downloading image %s"
+    IDS_START1              "Input a startpage URL, the program will download images in it and in its sublinks."
+    IDS_START2              "If the URL is too long, please resize the window to extend the combobox."
+    IDS_START3              "You can also edit the option to filter the images or download other page elements.\r\n"
+    IDS_STATUS_READY        "Ready"
+    IDS_SAMPLE_PAGE1        "www.sina.com.cn"
+    IDS_SAMPLE_PAGE2        "www.yahoo.com"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_SAMPLE_PAGE3        "www.funnycatpix.com"
+    IDS_STATUS_ANLZ_IMG     "Analyzing image URLs..."
+    IDS_STATUS_ANLZ_PAGE    "Analyzing page URLs..."
+    IDS_STATUS_DLD_PAGE     "Downloading page "
+    IDS_DLD_MPAGE_ERR       "GetImage can't open this page, error code: %d"
+    IDS_DLDD_PAGE           "Downloaded page: No.%d %s"
+    IDS_ANLZ_RSLT           "\tGet %d image URLs, %d pages are waiting"
+    IDS_STATUS_DLD_IMGS     "Downloading images in"
+    IDS_DLD_IMG             "\tStart Downloading image: No.%d: %s"
+    IDS_STATUS_DLDD_NUM     "%d images downloaded"
+    IDS_STOP                "Stopped.(Maybe some threads are still in progress)"
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\GetImage.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "l.CHS\afxres.rc"      // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
