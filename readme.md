@@ -7,4 +7,4 @@ The UI is in English, but there is a few Chinese in the comments of the codes. T
 ![downloadUI](downloadUI.jpg)
 ![optionDlg](optionDlg.jpg)
 
-By the way, welcome to my site ([yanke23.tk][])!
+By the way, welcome to my site ([yanke23.tk](yanke23.tk))!
